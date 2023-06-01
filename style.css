@@ -23,7 +23,7 @@
 }
 .logo {
   padding-left: 10px;
-  width: 100px;
+  width: 130px;
 }
 .nav-items {
   padding: 0 1em 0;
@@ -43,8 +43,36 @@
   cursor: pointer;
   /* background-color: #fff; */
 }
-.nav-items ul li:hover {
+
+.h-carticon {
+  position: relative;
+  top: 4px;
+  z-index: 1;
+  font-size: 36px;
+  color: #f5b301;
+
+  /* background-color: #d60b28; */
+}
+
+.h-count {
+  position: absolute;
+  top: 30px;
+  right: 35px;
+  z-index: 2;
+  font-size: 12px;
+  border-radius: 50%;
+  background-color: #f5b301;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  display: block;
+  text-align: center;
+  color: #1e2328;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+/* .nav-items ul li:hover {
   background-color: #f5b301;
   color: #1e2328;
-}
+} */
 /* CSS for HeaderComponent -->End*/

@@ -1,4 +1,6 @@
 import logo from "../../assets/logo.png";
+import { CiShoppingCart } from "react-icons/ci";
+// import cart from "../../assets/cart.png";
 const HeaderComponent = () => {
   return (
     <div className="header">
@@ -8,7 +10,10 @@ const HeaderComponent = () => {
           <li>Home</li>
           <li>About</li>
           <li>Food</li>
-          <li>Ecart</li>
+          <li className="h-cart">
+            <span className="h-count">1</span>
+            <CiShoppingCart className="h-carticon" />
+          </li>
         </ul>
       </div>
     </div>
