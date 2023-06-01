@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import { CiShoppingCart } from "react-icons/ci";
 // import cart from "../../assets/cart.png";
@@ -7,13 +8,24 @@ const HeaderComponent = () => {
       <img src={logo} alt="" className="logo" />
       <div className="nav-items">
         <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Food</li>
-          <li className="h-cart">
-            <span className="h-count">1</span>
-            <CiShoppingCart className="h-carticon" />
-          </li>
+          <Link to="/" className="link">
+            <li>Home</li>
+          </Link>
+          <Link to="/about" className="link">
+            <li>About</li>
+          </Link>
+          <Link to="/contact" className="link">
+            <li>Contact</li>
+          </Link>
+          <Link to="/" className="link">
+            <button className="h-login">Logout</button>
+          </Link>
+          <Link to="/cart" className="link">
+            <li className="h-cart">
+              <span className="h-count">1</span>
+              <CiShoppingCart className="h-carticon" />
+            </li>
+          </Link>
         </ul>
       </div>
     </div>

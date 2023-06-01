@@ -27,9 +27,9 @@
 }
 .nav-items {
   padding: 0 1em 0;
-  width: 400px;
+  width: 550px;
 }
-.nav-items > ul {
+.nav-items ul {
   list-style-type: none;
   display: flex;
   justify-content: center;
@@ -37,10 +37,17 @@
   /* background-color: aqua; */
 }
 
-.nav-items > ul > li {
+.link {
+  text-decoration: none;
+}
+
+.nav-items ul .link li {
+  /* list-style: none; */
+  text-decoration: none;
   padding: 35px 20px 35px 20px;
   font-size: 25px;
   cursor: pointer;
+  color: #f5b301;
   /* background-color: #fff; */
 }
 
@@ -57,7 +64,7 @@
 .h-count {
   position: absolute;
   top: 30px;
-  right: 35px;
+  right: 33px;
   z-index: 2;
   font-size: 12px;
   border-radius: 50%;
@@ -71,8 +78,28 @@
   font-family: "Roboto", sans-serif;
   font-weight: bold;
 }
-/* .nav-items ul li:hover {
+
+.h-login {
   background-color: #f5b301;
   color: #1e2328;
-} */
+  width: 115px;
+  height: 50px;
+  font-size: 25px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.h-login:hover {
+  background-color: #f0c13f;
+  color: #202327;
+}
+.nav-items ul .link li:hover {
+  color: #f0c13f;
+}
+.h-carticon:hover {
+  color: #f0c13f;
+}
+.h-count:hover {
+  background-color: #f0c13f;
+}
 /* CSS for HeaderComponent -->End*/

@@ -1,10 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { Outlet, createBrowserRouter } from "react-router-dom";
+import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import BodyComponent from "./components/BodyComponent";
 import FooterComponent from "./components/FooterComponent";
 import HeaderComponent from "./components/HeaderComponent";
+import AboutComponent from "./components/AboutComponent";
+import ContactComponent from "./components/ContactComponent";
+import ErrorComponent from "./components/ErrorComponent";
 
 const AppLayout = () => {
   return (
@@ -19,11 +22,23 @@ const AppLayout = () => {
 const appRouter = createBrowserRouter([
   {
     path: "/",
-    element: AppLayout,
+    element: <AppLayout />,
+    errorElement: <ErrorComponent />,
     children: [{ path: "/", element: <BodyComponent /> }],
+  },
+  {
+    path: "/about",
+    errorElement: <ErrorComponent />,
+
+    element: <AboutComponent />,
+  },
+  {
+    path: "/contact",
+    errorElement: <ErrorComponent />,
+    element: <ContactComponent />,
   },
 ]);
 
 // Tell React that div is my root
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AppLayout />);
+root.render(<RouterProvider router={appRouter} />);
