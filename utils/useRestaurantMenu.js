@@ -9,10 +9,19 @@ const useRestaurantMenu = (id) => {
   async function getRestaurantFood() {
     const data = await fetch(RES_MENU_LIST + id);
     const json = await data.json();
-    setRestaurantMenu(
+    if (
       json.data?.cards[2]["groupedCard"]?.cardGroupMap?.REGULAR?.cards[1]?.card
-        ?.card?.itemCards
-    );
+        ?.card?.itemCards === undefined
+    )
+      setRestaurantMenu(
+        json.data?.cards[2]["groupedCard"]?.cardGroupMap?.REGULAR?.cards[2]
+          ?.card?.card?.itemCards
+      );
+    else
+      setRestaurantMenu(
+        json.data?.cards[2]["groupedCard"]?.cardGroupMap?.REGULAR?.cards[1]
+          ?.card?.card?.itemCards
+      );
   }
   return restaurantMenu;
 };

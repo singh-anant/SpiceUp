@@ -5,11 +5,18 @@ import { ShimmerCategoryList } from "react-shimmer-effects";
 import useRestaurantInfo from "../../utils/useRestaurantInfo";
 import useRestaurantMenu from "../../utils/useRestaurantMenu";
 import { AiFillStar } from "react-icons/ai";
+import { useDispatch } from "react-redux";
+import { addItem } from "../../utils/cartSlice";
 const RestaurantMenuComponent = () => {
   const { id } = useParams();
   const restaurantInfo = useRestaurantInfo(id);
   const restaurantMenu = useRestaurantMenu(id);
-  console.log(restaurantMenu);
+  const dispatch = useDispatch();
+  // We will pass all the items
+  const addFoodItem = (item) => {
+    // Dispatching action and passing the payload
+    dispatch(addItem(item));
+  };
 
   return !restaurantMenu ? (
     <ShimmerCategoryList title items={7} categoryStyle="STYLE_SEVEN" />
@@ -61,7 +68,13 @@ const RestaurantMenuComponent = () => {
                       alt={item?.card?.info?.name}
                     />
                   )}
-                  <button className="add-btn"> ADD +</button>
+                  <button
+                    className="add-btn"
+                    onClick={() => addFoodItem(item?.card?.info)}
+                  >
+                    {" "}
+                    ADD{" "}
+                  </button>
                 </div>
               </div>
             ))}
