@@ -6,7 +6,8 @@ import useRestaurantInfo from "../../utils/useRestaurantInfo";
 import useRestaurantMenu from "../../utils/useRestaurantMenu";
 import { AiFillStar } from "react-icons/ai";
 import { useDispatch } from "react-redux";
-import { addItem } from "../../utils/cartSlice";
+import { addItem } from "../../utils/cartSlice.js";
+import { addMoney } from "../../utils/amountSlice.js";
 const RestaurantMenuComponent = () => {
   const { id } = useParams();
   const restaurantInfo = useRestaurantInfo(id);
@@ -16,6 +17,10 @@ const RestaurantMenuComponent = () => {
   const addFoodItem = (item) => {
     // Dispatching action and passing the payload
     dispatch(addItem(item));
+  };
+
+  const addAmountItem = (amount) => {
+    dispatch(addMoney(amount / 100));
   };
 
   return !restaurantMenu ? (
@@ -70,9 +75,11 @@ const RestaurantMenuComponent = () => {
                   )}
                   <button
                     className="add-btn"
-                    onClick={() => addFoodItem(item?.card?.info)}
+                    onClick={() => {
+                      addFoodItem(item?.card?.info);
+                      addAmountItem(item?.card?.info?.price);
+                    }}
                   >
-                    {" "}
                     ADD{" "}
                   </button>
                 </div>
