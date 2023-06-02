@@ -1,5 +1,10 @@
-const FooterComponent = () => {
-  return <div>FooterComponent</div>;
+// Footer component for footer section
+const Footer = () => {
+  return (
+    <div className="footer">
+      Developed By <span>Anant Singh 🥷🥷</span>
+    </div>
+  );
 };
 
-export default FooterComponent;
+export default Footer;

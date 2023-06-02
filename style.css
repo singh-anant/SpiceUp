@@ -547,3 +547,13 @@
   background-color: #1e2328;
   color: #f5b301;
 }
+/* Food-Item -->end */
+
+/* footer CSS Start*/
+.footer {
+  width: auto;
+  text-align: center;
+  padding: 20px 10px 20px;
+  background-color: #1e2328;
+  color: #f5b301;
+}
