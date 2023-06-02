@@ -103,3 +103,37 @@
   background-color: #f0c13f;
 }
 /* CSS for HeaderComponent -->End*/
+
+/* Error page CSS Start--> */
+.error-page {
+  text-align: center;
+  height: 100vh;
+  width: auto;
+}
+.error-page img {
+  margin-top: 200px;
+  margin-bottom: 30px;
+  width: 500px;
+  background-color: #f5b301;
+}
+.error-page .error-data {
+  padding: 10px 0px;
+}
+
+.error-page .error-back-home {
+  padding: 20px;
+}
+.error-page .error-back-home a {
+  text-decoration: none;
+  color: #f5b301;
+  background-color: #1e2328;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.error-page .error-back-home a:hover {
+  background-color: #f0c13f;
+  color: #202327;
+}
+
+/* Error page CSS--> End */
