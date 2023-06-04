@@ -24,11 +24,15 @@ This project was developed as part of a learning experience and for demonstratio
 
 ## Screenshots
 
+![Screenshot-279.png](https://i.postimg.cc/HxB7cjSc/Screenshot-279.png)
+
+![Screenshot-280.png](https://i.postimg.cc/gjg5Tygz/Screenshot-280.png)
+
+![Screenshot-280.png](https://i.postimg.cc/bwjfndcv/Screenshot-281.jpg)
 
 
-![](https://github.com/singh-anant/SpiceUp/blob/master/assets/Screenshot%20(281).jpg)
 
-![](https://github.com/singh-anant/SpiceUp/blob/master/assets/Screenshot%20(280).png)
 
-![](https://github.com/singh-anant/SpiceUp/blob/master/assets/Screenshot%20(281).png)
+
+
 
