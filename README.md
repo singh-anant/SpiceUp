@@ -24,7 +24,7 @@ This project was developed as part of a learning experience and for demonstratio
 
 ## Screenshots
 
-![Screenshot-279.png](https://i.postimg.cc/HxB7cjSc/Screenshot-279.png)
+![Screenshot-279.png](https://i.postimg.cc/TY5kjVPm/Screenshot-279.png)
 
 ![Screenshot-280.png](https://i.postimg.cc/gjg5Tygz/Screenshot-280.png)
 
