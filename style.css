@@ -547,6 +547,27 @@
   background-color: #1e2328;
   color: #f5b301;
 }
+
+.c-checkout-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2em;
+}
+.c-checkout-btn {
+  background-color: #f5b301;
+  color: #1e2328;
+  font-size: 25px;
+  padding: 15px;
+  outline: none;
+  border: none;
+  border-radius: 1px;
+}
+
+.c-checkout-btn:hover {
+  background-color: #1e2328;
+  color: #f5b301;
+}
 /* Food-Item -->end */
 
 /* footer CSS Start*/
