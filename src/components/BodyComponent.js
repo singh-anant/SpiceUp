@@ -57,8 +57,12 @@ const BodyComponent = () => {
         ) : (
           filteredRestaurants.map((restaurant) => {
             return (
-              <Link className="r-link" to={"/restaurant/" + restaurant.data.id}>
-                <RestaurantCard {...restaurant.data} key={restaurant.data.id} />
+              <Link
+                className="r-link"
+                key={restaurant.data.id}
+                to={"/restaurant/" + restaurant.data.id}
+              >
+                <RestaurantCard {...restaurant.data} />
               </Link>
             );
           })
