@@ -11,6 +11,8 @@ import RestaurantMenuComponent from "./components/RestaurantMenuComponent";
 import { Provider } from "react-redux";
 import store from "../utils/store";
 import CartComponent from "./components/CartComponent";
+import LoginComponent from "./components/LoginComponent";
+import RegisterComponent from "./components/RegisterComponent";
 
 const AppLayout = () => {
   return (
@@ -49,7 +51,19 @@ const appRouter = createBrowserRouter([
         errorElement: <ErrorComponent />,
         element: <RestaurantMenuComponent />,
       },
+     
     ],
+    
+  },
+  {
+    path: "/login",
+    errorElement: <ErrorComponent />,
+    element: <LoginComponent />,
+  },
+  {
+    path: "/register",
+    errorElement: <ErrorComponent />,
+    element: <RegisterComponent />,
   },
 ]);
 
