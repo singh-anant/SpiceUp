@@ -24,7 +24,11 @@ const HeaderComponent = () => {
             <li>About</li>
           </Link>
           <Link to="/" className="link">
-            {isLoggedIn ? <li>{userName}</li> : <li>No User</li>}
+            {isLoggedIn ? (
+              <li style={{ padding: 30 }}>{userName}</li>
+            ) : (
+              <li>No User</li>
+            )}
           </Link>
           {/* use conditional rendering for login and logout */}
           {isLoggedIn ? (
