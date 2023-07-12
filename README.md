@@ -5,7 +5,7 @@ The Food Ordering App is a web application allowing users to browse and order fo
 ## Features
 
 
--User Registration-User can register through the app which will store the data in MySQL database.
+- User Registration-User can register through the app which will store the data in MySQL database.
 - Restaurant Listing: Users can view a list of restaurants available on the platform, along with their menus and other details.
 - Menu Navigation: Users can browse a selected restaurant's menu items, filter them based on categories or preferences, and add items to their cart.
 - Cart Management: Users can view their cart, modify quantities, remove items, and proceed to checkout.
