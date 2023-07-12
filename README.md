@@ -56,7 +56,7 @@ This project was developed as part of a learning experience and for demonstratio
 
 [![Screenshot-300.png](https://i.postimg.cc/kG8Jd5qk/Screenshot-300.png)](https://postimg.cc/PvXsWTL4)
 
-### My SQL 
+### MySQL 
 
 [![SQL-1.jpg](https://i.postimg.cc/02DQTVNb/SQL-1.jpg)](https://postimg.cc/cr10YMwS)
 
