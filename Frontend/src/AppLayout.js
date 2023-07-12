@@ -51,19 +51,17 @@ const appRouter = createBrowserRouter([
         errorElement: <ErrorComponent />,
         element: <RestaurantMenuComponent />,
       },
-     
+      {
+        path: "/login",
+        errorElement: <ErrorComponent />,
+        element: <LoginComponent />,
+      },
+      {
+        path: "/register",
+        errorElement: <ErrorComponent />,
+        element: <RegisterComponent />,
+      },
     ],
-    
-  },
-  {
-    path: "/login",
-    errorElement: <ErrorComponent />,
-    element: <LoginComponent />,
-  },
-  {
-    path: "/register",
-    errorElement: <ErrorComponent />,
-    element: <RegisterComponent />,
   },
 ]);
 
