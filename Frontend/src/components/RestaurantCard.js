@@ -4,9 +4,9 @@ const RestaurantCard = ({
   name,
   cuisines,
   cloudinaryImageId,
-  lastMileTravelString,
+  sla,
   avgRating,
-  costForTwoString,
+  costForTwo,
 }) => {
   return (
     <div className="card">
@@ -29,9 +29,9 @@ const RestaurantCard = ({
           {avgRating}
         </h4>
 
-        <h4 className="r-lastMileTravelString">🛵{lastMileTravelString}</h4>
+        <h4 className="r-lastMileTravelString">🛵{sla.lastMileTravelString}</h4>
 
-        <h4 className="r-costForTwoString">{costForTwoString}</h4>
+        <h4 className="r-costForTwoString">{costForTwo}</h4>
       </span>
     </div>
   );

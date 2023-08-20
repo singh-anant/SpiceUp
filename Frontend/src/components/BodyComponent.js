@@ -10,7 +10,7 @@ const BodyComponent = () => {
   // useState Hook-to create local state variable
   const [allRestaurants, setAllRestaurants] = useState([]);
   const [searchText, setSearchText] = useState("");
-  const [filteredRestaurants, setfilteredRestaurants] = useState([]);
+  const [filteredRestaurants, setFilteredRestaurants] = useState([]);
   useEffect(() => {
     getRestaurantList();
   }, []);
@@ -18,8 +18,15 @@ const BodyComponent = () => {
   async function getRestaurantList() {
     const data = await fetch(ALL_RES_LIST);
     const json = await data.json();
-    setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards);
-    setfilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+    console.log(
+      json?.data?.cards[2].card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
+    setAllRestaurants(
+      json?.data?.cards[2].card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
+    setFilteredRestaurants(
+      json?.data?.cards[2].card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
   }
   // Early Return
   if (!allRestaurants) return null;
@@ -28,7 +35,7 @@ const BodyComponent = () => {
     <ShimmerSimpleGallery card imageHeight={200} caption />
   ) : (
     <>
-      <div className="search-container p-5 m-2">
+      <div className="search-container">
         <input
           type="text"
           className="search-input"
@@ -42,10 +49,9 @@ const BodyComponent = () => {
           className="search-btn"
           onClick={() => {
             // We want filter the data first
-            const Data = filterData(searchText, allRestaurants);
+            const data = filterData(searchText, allRestaurants);
             //  Update the data
-
-            setfilteredRestaurants(Data);
+            setFilteredRestaurants(data);
           }}
         >
           Search
@@ -53,16 +59,16 @@ const BodyComponent = () => {
       </div>
       <div className="restaurant-list">
         {filteredRestaurants.length === 0 ? (
-          <h1>Oops!No restro matches</h1>
+          <h1>Oops!No restaurant matches</h1>
         ) : (
           filteredRestaurants.map((restaurant) => {
             return (
               <Link
                 className="r-link"
-                key={restaurant.data.id}
-                to={"/restaurant/" + restaurant.data.id}
+                key={restaurant.info.id}
+                to={"/restaurant/" + restaurant.info.id}
               >
-                <RestaurantCard {...restaurant.data} />
+                <RestaurantCard {...restaurant.info} />
               </Link>
             );
           })

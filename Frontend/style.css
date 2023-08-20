@@ -10,13 +10,8 @@
 .header {
   display: flex;
   justify-content: space-between;
-  /* margin-bottom: 10px; */
-
-  width: auto;
   background-color: #1e2328;
-  /* border-radius: 5px; */
   color: #f5b301;
-  /* font-weight: bold; */
 }
 .logo {
   margin-top: 8px;
