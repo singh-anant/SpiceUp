@@ -1,6 +1,6 @@
 # SpiceUp
 
-The Food Ordering App is a web application allowing users to browse and order food from various restaurants. It is built using React, a popular JavaScript library for building user interfaces, and React Redux, a predictable state container for managing application state. For handling authentication Node-Js, Express-Js, and Mysql are used.
+The Food Ordering web application allowing users to browse and order food from various restaurants. It is built using React, a popular JavaScript library for building user interfaces, and React Redux, a predictable state container for managing application state. For handling authentication Node-Js, Express-Js, and Mysql are used.
 
 ## Features
 
