@@ -565,6 +565,8 @@
 
 /* footer CSS Start*/
 .footer {
+  display: none;
+  position: sticky;
   width: auto;
   text-align: center;
   padding: 20px 10px 20px;

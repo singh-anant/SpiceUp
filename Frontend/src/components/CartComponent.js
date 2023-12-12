@@ -8,7 +8,7 @@ import { clearMoney } from "../../utils/amountSlice.js";
 import GooglePayButton from "@google-pay/button-react";
 const CartComponent = () => {
   const cartItems = useSelector((store) => store.cart.items);
-  const totalamount = useSelector((store) => store.amount.totalprice);
+  const totalAmount = useSelector((store) => store.amount.totalPrice);
 
   const dispatch = useDispatch();
   const clearWholeCart = () => {
@@ -41,7 +41,8 @@ const CartComponent = () => {
           Clear All
         </button>
         <h2 className="c-total-amount">
-          Total Amount-<span>₹{totalamount.toFixed(2)}</span>
+          Total Amount-
+          <span>₹{totalAmount?.toLocaleString("hi")}</span>
         </h2>
       </div>
       <div className="c-checkout-wrapper">
@@ -73,7 +74,7 @@ const CartComponent = () => {
             transactionInfo: {
               totalPriceStatus: "FINAL",
               totalPriceLabel: "Total",
-              totalPrice: totalamount.toFixed(2),
+              totalPrice: totalAmount?.toFixed(2),
               currencyCode: "INR",
               countryCode: "IN",
             },

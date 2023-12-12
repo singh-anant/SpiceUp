@@ -3,17 +3,17 @@ import { createSlice } from "@reduxjs/toolkit";
 const amountSlice = createSlice({
   name: "amount",
   initialState: {
-    totalprice: 0,
+    totalPrice: 0,
   },
   reducers: {
     addMoney: (state, action) => {
-      state.totalprice += action.payload;
+      state.totalPrice += action.payload;
     },
     subtractMoney: (state, action) => {
-      state.totalprice -= action.payload;
+      state.totalPrice -= action.payload;
     },
     clearMoney: (state) => {
-      state.totalprice = 0;
+      state.totalPrice = 0;
     },
   },
 });
